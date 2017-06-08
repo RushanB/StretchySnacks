@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StretchySnacks" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="88b-ul-R0j">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wQ-c2-XPd">
+                                        <rect key="frame" x="337" y="19" width="38" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="38" id="x3A-Dj-dPU"/>
+                                        </constraints>
+                                        <state key="normal" title="➕"/>
+                                        <connections>
+                                            <action selector="plusTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="viI-dd-2oC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="EW6-oO-FvG"/>
+                                    <constraint firstAttribute="bottom" secondItem="9wQ-c2-XPd" secondAttribute="bottom" id="P9c-Z8-G4y"/>
+                                    <constraint firstAttribute="trailing" secondItem="9wQ-c2-XPd" secondAttribute="trailing" id="Xmx-y6-KNm"/>
+                                    <constraint firstItem="9wQ-c2-XPd" firstAttribute="top" secondItem="88b-ul-R0j" secondAttribute="top" constant="19" id="ohb-Th-HPj"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="49z-0g-kAv">
+                                <rect key="frame" x="0.0" y="45" width="375" height="622"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="49z-0g-kAv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9me-1V-9pR"/>
+                            <constraint firstItem="88b-ul-R0j" firstAttribute="trailing" secondItem="49z-0g-kAv" secondAttribute="trailing" id="A3U-FB-no5"/>
+                            <constraint firstItem="88b-ul-R0j" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Amj-WL-3z6"/>
+                            <constraint firstItem="88b-ul-R0j" firstAttribute="leading" secondItem="49z-0g-kAv" secondAttribute="leading" id="DVB-6e-Zjh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="49z-0g-kAv" secondAttribute="bottom" id="KSI-Au-dYX"/>
+                            <constraint firstAttribute="trailing" secondItem="49z-0g-kAv" secondAttribute="trailing" id="lTt-js-xzt"/>
+                            <constraint firstItem="49z-0g-kAv" firstAttribute="top" secondItem="88b-ul-R0j" secondAttribute="bottom" constant="1" id="vmm-zt-DWF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="stretchyView" destination="88b-ul-R0j" id="wzD-Et-eAe"/>
+                        <outlet property="stretchyViewHeightCons" destination="EW6-oO-FvG" id="R7g-DS-kaX"/>
+                        <outlet property="tableView" destination="49z-0g-kAv" id="rY9-u2-5Rn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>
