@@ -25,27 +25,38 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wQ-c2-XPd">
-                                        <rect key="frame" x="337" y="19" width="38" height="25"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="38" id="x3A-Dj-dPU"/>
-                                        </constraints>
+                                        <rect key="frame" x="343" y="18" width="30" height="30"/>
                                         <state key="normal" title="➕"/>
                                         <connections>
-                                            <action selector="plusTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="viI-dd-2oC"/>
+                                            <action selector="plusTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jny-jl-Stp"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="9wQ-c2-XPd" firstAttribute="top" secondItem="88b-ul-R0j" secondAttribute="top" constant="18" id="3iz-ZT-Xq8"/>
                                     <constraint firstAttribute="height" constant="44" id="EW6-oO-FvG"/>
-                                    <constraint firstAttribute="bottom" secondItem="9wQ-c2-XPd" secondAttribute="bottom" id="P9c-Z8-G4y"/>
-                                    <constraint firstAttribute="trailing" secondItem="9wQ-c2-XPd" secondAttribute="trailing" id="Xmx-y6-KNm"/>
-                                    <constraint firstItem="9wQ-c2-XPd" firstAttribute="top" secondItem="88b-ul-R0j" secondAttribute="top" constant="19" id="ohb-Th-HPj"/>
+                                    <constraint firstAttribute="trailing" secondItem="9wQ-c2-XPd" secondAttribute="trailing" constant="2" id="d0X-vn-fpn"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="49z-0g-kAv">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="49z-0g-kAv">
                                 <rect key="frame" x="0.0" y="45" width="375" height="622"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="66" id="96I-9r-47X">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="66"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="96I-9r-47X" id="LgQ-Qe-8EV">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ONp-0z-IfO"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="zBy-cg-UCv"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -60,6 +71,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="plusButton" destination="9wQ-c2-XPd" id="M0K-2s-4xp"/>
                         <outlet property="stretchyView" destination="88b-ul-R0j" id="wzD-Et-eAe"/>
                         <outlet property="stretchyViewHeightCons" destination="EW6-oO-FvG" id="R7g-DS-kaX"/>
                         <outlet property="tableView" destination="49z-0g-kAv" id="rY9-u2-5Rn"/>
